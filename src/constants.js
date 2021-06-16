@@ -1,2 +1,2 @@
-const URL = "http://localhost:8000";
+const URL = "https://react-blog-website.herokuapp.com/api";
 export default URL;
