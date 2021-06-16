@@ -27,7 +27,7 @@ function App() {
                     <Route path="/blogs/:id">
                       <BlogDes />
                     </Route>
-                    <Route exact path="/sameer">
+                    <Route exact path="*">
                       <Home />
                     </Route>
                   </Switch>
