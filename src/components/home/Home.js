@@ -3,13 +3,10 @@ import Card from "./Card";
 import { useFetch } from "../useFetch";
 import Loader from "../Loader";
 import Error from "../Error";
+import URL from "../../constants";
 
 const Home = () => {
-  const {
-    data: blogs,
-    isPending,
-    error,
-  } = useFetch("http://localhost:8000/blogs");
+  const { data: blogs, isPending, error } = useFetch(`${URL}/blogs`);
   return (
     <div className="home text-center" style={{ minHeight: "100vh" }}>
       {blogs && (
