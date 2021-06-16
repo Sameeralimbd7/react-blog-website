@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import URL from "../../constants";
 
 const Create = () => {
   const [title, settitle] = useState("");
@@ -10,7 +11,7 @@ const Create = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:8000/blogs`, {
+    fetch(`${URL}/blogs`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(blog),
