@@ -23,8 +23,8 @@ const Create = () => {
 
   return (
     <div className="create contaienr-fluid">
-      <div className="card my-4 p-3 mx-auto border-0">
-        <div className="card-body">
+      <div className="card my-4 p-3 mx-auto border-0 mx-0">
+        <div className="card-body mx-0">
           <form onSubmit={handleSubmit} className="text-center">
             <input
               id="title-input"
