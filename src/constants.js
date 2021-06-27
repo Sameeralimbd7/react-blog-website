@@ -1,2 +1,2 @@
-const URL = "https://react-blog-website.herokuapp.com/api";
+const URL = "https://reactblogwebsite.herokuapp.com/api";
 export default URL;
