@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer mt-auto py-3" style={{ position: "relative" }}>
-      <span className="divider-line"></span>
+      <span className="divider_line"></span>
       <div className="container-fluid text-center">
         <span className="text-muted footer-heading">
           Made With Love By Sameer Ali{"  "}
