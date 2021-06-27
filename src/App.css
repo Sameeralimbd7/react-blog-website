@@ -72,7 +72,7 @@ footer.footer div span.footer-heading a {
 /* Create Conponent */
 
 .create .card {
-  width: 400px;
+  width: 100%;
   background-color: transparent;
 }
 .create .card form {
