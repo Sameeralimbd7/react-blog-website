@@ -30,6 +30,7 @@ footer.footer .divider_line {
 }
 footer.footer div span.footer-heading {
   color: #f1f2f6 !important;
+  font-family: "Convergence", sans-serif;
 }
 footer.footer div span.footer-heading a {
   color: #3ae374 !important;
