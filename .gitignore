@@ -4,6 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
+server.js
+Procfile
+static.json
 # testing
 /coverage
 
