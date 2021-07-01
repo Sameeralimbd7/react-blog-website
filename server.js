@@ -11,5 +11,5 @@ server.use(
     "/api/*": "/$1",
   })
 );
-server.use(router);
+server.use("/api", router);
 server.listen(port);
