@@ -3,7 +3,7 @@ const jsonServer = require('json-server');
 const server = jsonServer.create();
 const path = require('path');
 const router = jsonServer.router('db.json');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 9000;
 
 server.use(jsonServer.defaults());
 server.use(router);
