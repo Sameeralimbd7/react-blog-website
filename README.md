@@ -1,6 +1,6 @@
 # React Blog Website
 
-This project was created by [me](https://github.com/sameeralimbd7)[Sameer Ali]. And this repo is my first repo.
+This project was created by [me](https://github.com/sameeralimbd7) [Sameer Ali] . And this repo is my first repo.
 
 ## About
 
