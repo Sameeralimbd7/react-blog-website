@@ -8,9 +8,5 @@ const middlewares = jsonServer.defaults({
 server.use(middlewares);
 server.use("/api", jsonServer.router("db.json"));
 server.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'), function(err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  });
+  res.sendFile(path.resolve(__dirname + '/../dist/index.html'));
 });
