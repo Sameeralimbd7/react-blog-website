@@ -10,7 +10,5 @@ server.use(middlewares);
 server.get('/*', function (req, res) {
    res.sendFile(path.join(__dirname, 'build', 'index.html'));
  });
-server.get('/api', function (req, res) {
-   res.sendFile(router);
- });
+server.use('/api', router);
 server.listen(port);
