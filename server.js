@@ -10,5 +10,10 @@ server.use(middlewares);
 server.get('/*', function (req, res) {
    res.sendFile(path.join(__dirname, 'build', 'index.html'));
  });
-server.use('/api', router);
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+  })
+);
+server.use(router);
 server.listen(port);
