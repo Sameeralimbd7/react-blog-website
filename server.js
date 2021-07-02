@@ -1,14 +1,15 @@
-
-const jsonServer = require('json-server');
+const jsonServer = require("json-server");
 const server = jsonServer.create();
-const path = require('path');
-const router = jsonServer.router('db.json');
-const port = process.env.PORT || 9000;
-
-server.use(jsonServer.defaults());
+const router = jsonServer.router("db.json");
+const middlewares = jsonServer.defaults({
+  static: "./build",
+});
+const port = process.env.PORT || 8000;
+server.use(middlewares);
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+  })
+);
 server.use(router);
-server.use(server.static(path.join(__dirname, 'build')));
-server.get('/*', function (req, res) {
-   res.sendFile(path.join(__dirname, 'build', 'index.html'));
- });
 server.listen(port);
