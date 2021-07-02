@@ -7,8 +7,8 @@ const middlewares = jsonServer.defaults({
 });
 const port = process.env.PORT || 8000;
 server.use(middlewares);
-app.use(jsonServer.router(path.join(__dirname, 'build')));
-app.get('/*', function (req, res) {
+server.use(jsonServer.router(path.join(__dirname, 'build')));
+server.get('/*', function (req, res) {
    res.sendFile(path.join(__dirname, 'build', 'index.html'));
  });
 server.use('/api', router);
