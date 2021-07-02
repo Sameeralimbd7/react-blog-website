@@ -7,13 +7,11 @@ const middlewares = jsonServer.defaults({
 });
 const port = process.env.PORT || 8000;
 server.use(middlewares);
-server.get('/*', function (req, res) {
+server.use('/api', router);
+server.get('/create', function (req, res) {
    res.sendFile(path.join(__dirname, 'build', 'index.html'));
  });
-server.use(
-  jsonServer.rewriter({
-    "/api/*": "/$1",
-  })
-);
-server.use(router);
+server.get('/blogs/*', function (req, res) {
+   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+ });
 server.listen(port);
